@@ -1,7 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ModelConfig, ModelSettingsModal } from "./ModelSettingsModal"
 import { TranscriptModelProps } from "./TranscriptSettings"
-import { About } from "./About";
 
 interface SettingTabsProps {
     modelConfig: ModelConfig;
@@ -28,32 +27,27 @@ export function SettingTabs({
 
     return (
         <Tabs defaultValue={defaultTab} className="w-full" onValueChange={handleTabChange}>
-  <TabsList>
-    <TabsTrigger value="modelSettings">Model Settings</TabsTrigger>
-    {/* <TabsTrigger value="transcriptSettings">Transcript Settings</TabsTrigger> */}
-    <TabsTrigger value="about">About</TabsTrigger>
-  </TabsList>
-  <TabsContent value="modelSettings">
-    <ModelSettingsModal
-
-modelConfig={modelConfig}
-setModelConfig={setModelConfig}
-onSave={onSave}
-/>
-  </TabsContent>
-  {/* <TabsContent value="transcriptSettings">
-    <TranscriptSettings
-    transcriptModelConfig={transcriptModelConfig}
-    setTranscriptModelConfig={setTranscriptModelConfig}
-    onSave={onSaveTranscript}
-  />
-  </TabsContent> */}
-  
-  <TabsContent value="about">
-    <About />
-  </TabsContent>
-</Tabs>
+            <TabsList>
+                <TabsTrigger value="modelSettings">Model Settings</TabsTrigger>
+                {/* <TabsTrigger value="transcriptSettings">Transcript Settings</TabsTrigger> */}
+                {/* About tab removed completely */}
+            </TabsList>
+            <TabsContent value="modelSettings">
+                <ModelSettingsModal
+                    modelConfig={modelConfig}
+                    setModelConfig={setModelConfig}
+                    onSave={onSave}
+                />
+            </TabsContent>
+            {/* <TabsContent value="transcriptSettings">
+                <TranscriptSettings
+                transcriptModelConfig={transcriptModelConfig}
+                setTranscriptModelConfig={setTranscriptModelConfig}
+                onSave={onSaveTranscript}
+                />
+            </TabsContent> */}
+            
+            {/* About tab content removed completely */}
+        </Tabs>
     )
 }
-
-

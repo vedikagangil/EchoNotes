@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Meetily - Frontend
 
 A modern desktop application for recording, transcribing, and analyzing meetings with AI assistance. Built with Next.js and Tauri for a native desktop experience.
@@ -180,3 +181,6 @@ The server will be available at http://localhost:8178
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+=======
+# EchoNotes
+>>>>>>> 0b1177655fd8ef8f4bc01afa78cc3dac9707bf01
